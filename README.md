@@ -11,6 +11,11 @@ sudo python3 -m pip install tufw
 # OR
 sudo pip3 install tufw
 ```
+Obviously Tufw needs [`dialog`](https://invisible-island.net/dialog/), so install it with
+```sh
+sudo apt install dialog
+```
+or what you use on your distribution.
 # 
 ## Running
 As ufw, Tufw needs to be run as root.

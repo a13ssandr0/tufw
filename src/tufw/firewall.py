@@ -18,6 +18,7 @@
 from re import sub, compile
 from subprocess import Popen, PIPE
 from socket import socket, AF_INET,  SOCK_DGRAM
+from typing import Union
 
 
 POL_IN     = 'incoming'
@@ -210,7 +211,7 @@ class Firewall():
         
         return result # cmd | ufw result
     
-    def delete_rule(self, num:str|int):
+    def delete_rule(self, num: Union[str, int]):
         delete_rule = [self.UFW_PATH, '--force', 'delete', str(num)]
         cmd = self._run_cmd(delete_rule)
         
