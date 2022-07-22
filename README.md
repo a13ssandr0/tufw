@@ -31,3 +31,9 @@ tufw
 # 
 ## Give to Caesar what is Caesar's
 This project comes from my need to have a simple frontend for ufw like [@costales](https://github.com/costales)' [gufw](https://github.com/costales/gufw), but character based, to install on my headless server, so the code in `firewall.py` comes from costales' work, simplified a bit, but still his work.
+
+#
+#
+If you like tufw, consider giving me a tip.
+
+[!["Buy Me A Coffee"](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/a13ssandr0)
