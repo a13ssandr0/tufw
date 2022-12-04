@@ -6,6 +6,8 @@ Ufw terminal frontend based on dialog
 # 
 ## Installation
 Tufw **NEEDS** to be installed as root, because it needs to run as root and python won't load the module if it's installed as a normal user.
+
+Tufw requires python3.0 or newer.
 ```sh
 sudo python3 -m pip install tufw
 # OR
@@ -15,7 +17,7 @@ Obviously Tufw needs [`dialog`](https://invisible-island.net/dialog/), so instal
 ```sh
 sudo apt install dialog
 ```
-or what you use on your distribution.
+or whatever you use on your distribution.
 # 
 ## Running
 As ufw, Tufw needs to be run as root.
