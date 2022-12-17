@@ -19,7 +19,7 @@ def elevate():
 def rotate(input, n=1):
 	return input[n:] + input[:n]
 
-def get_tuple_with_value(list: list[tuple], index: int, value):
+def get_tuple_with_value(list, index: int, value):
 	for t in list:
 		if t[index] == value:
 			return t
@@ -151,7 +151,8 @@ def delete_rule(d: Dialog, ufw: Firewall):
 				d.msgbox(text='No rules selected', height=6, width=30)
 			elif d.yesno(
 					title='Warning!!',
-					text=f"Are you sure you want to delete {len(response1[1])} rule{'' if len(response1[1])==1 else 's'}?",
+					text="Are you sure you want to delete {} rule{}?"\
+						.format(len(response1[1]), ('' if len(response1[1])==1 else 's')),
 					default_button='No'
 				) == d.OK:
 				d.gauge_start(text='', percent=0, title='Deleting rules...', width=60)

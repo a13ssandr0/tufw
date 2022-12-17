@@ -107,7 +107,7 @@ class Firewall():
 
         return findall(r'\[\s+\d+\]\s*(.*?(?:ALLOW|DENY|LIMIT|REJECT).*?)\s*\n', rules)
     
-    def add_rule(self, insert:str, policy:str, direction:str, iface:str, routed:str, logging:str, proto:str, from_ip:str, from_port:str, to_ip:str, to_port:str) -> tuple[bool, str, str]:
+    def add_rule(self, insert:str, policy:str, direction:str, iface:str, routed:str, logging:str, proto:str, from_ip:str, from_port:str, to_ip:str, to_port:str):
         # ufw [route] [insert NUM] allow|deny|reject|limit [in|out on INTERFACE] [log|log-all] [proto protocol] [from ADDRESS [port PORT]] [to ADDRESS [port PORT]]
         cmd_rule = [self.UFW_PATH]
 
@@ -192,7 +192,7 @@ class Firewall():
         s.connect(('10.255.255.255', 1))
         return s.getsockname()[0]
     
-    def get_known_services(self, sort_by_name=False) -> list[tuple[str,str,str,str,str]]:
+    def get_known_services(self, sort_by_name=False):
         all_serv = []
         with open('/etc/services') as f:
             lines = filter(lambda x: x and not x.startswith('#'), map(lambda x: x.strip(), f.readlines()))
