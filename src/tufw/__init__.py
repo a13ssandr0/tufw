@@ -4,7 +4,7 @@ from os import execlp, getuid
 from sys import argv, executable
 
 from dialog import Dialog
-from firewall import *
+from tufw.firewall import *
 
 
 def elevate():
