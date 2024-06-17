@@ -1,10 +1,13 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 from errno import ENOENT
 from os import execlp, getuid
 from sys import argv, executable
 
 from dialog import Dialog
-from firewall import *
+try:
+	from .firewall import *
+except ImportError:
+	from firewall import *
 
 
 def elevate():
